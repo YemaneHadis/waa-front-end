@@ -2,18 +2,17 @@ import { React, useRef } from "react";
 
 
 
-export default function ChangeTitle(props) {
+export default function CreatePost(props) {
   const newProductForm = useRef();
 
   const changeNameClicked = () => {
     const form = newProductForm.current;
-    const data = {
-      title: form["changename"].value,
-      
-    
+    const post = {
+      title: form["title"].value,
+      content:form["content"].value,
+      author: form["author"].value
     };
-    // console.log(props)
-    props.changeTitle(data.title)
+    props.createPost(post)
   };
   return (
     <div className="container">
@@ -23,8 +22,12 @@ export default function ChangeTitle(props) {
           <h6 className="center"> Chnage Name </h6>
         </div>
 
-        <label>ChangeName</label>
-        <input type="text" label={"changename"} name={"changename"} />
+        <label>Title</label>
+        <input type="text" label={"title"} name={"title"} />
+        <label>Author</label>
+        <input type="text" label={"author"} name={"author"} />
+        <label>Content</label>
+        <input type="text" label={"content"} name={"content"} />
       </form>
 
       <div className="center">

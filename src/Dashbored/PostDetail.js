@@ -4,7 +4,10 @@ export default function PostDetail(props) {
   return (
     <>
       {props.post != null && (
-        <div className="post " >
+        <div className="post card " >
+          <div>
+            <span className="card-title">Post Detail Information</span>
+          </div>
           <div className="col s12 m5">
             <div className="card-panel  ">
               <div>
@@ -15,14 +18,24 @@ export default function PostDetail(props) {
               </div>
               <div>
                 <div className="review center">
-                  <h4>Review</h4>
-                <p>{props.post.review[0]}</p>
-                <p>{props.post.review[1]}</p>
+                <p>{props.post.content}</p>
                 </div>
                
               </div>
             </div>
+            <div className="card-action">
+            <button 
+            onClick={()=>props.deleteHandler(props.post.id)}
+            // onClick={()=>{}}
+             class="
+              btn-floating
+              halfway-fab waves-effect
+              waves-light red">
+                <i class="material-icons">delete</i>
+            </button>
+            </div>
           </div>
+
         </div>
       )}
     </>
