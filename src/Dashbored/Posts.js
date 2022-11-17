@@ -1,32 +1,21 @@
-// import React from 'react'
-// import Post from './Post'
-
-// export default function Posts(probs) {
-//   const posts =  probs.posts.map(post => {
-//     return <Post
-//       id={post.id}
-//       title={post.title}
-//       author= {post.author}
-//     />
-//   })
-//   return (
-//       posts
-//   )
-// }
 
 import React, { Component } from 'react'
 import Post from './Post'
 
-export default class Posts extends Component {
-  render() {
-   const postList = this.props.post.map(post =>{
+
+
+
+export default function Posts(props) {
+  
+  const postList = props.post.map(post =>{
     return <Post
         post  = {post}
+        clickHandler = {props.changeActivePost}
+        
     />
-   })
-    return postList;
-      
-      // <div>Posts</div>
-  
-  }
+   })   
+
+   return postList
+
 }
+
