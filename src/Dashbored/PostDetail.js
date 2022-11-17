@@ -3,7 +3,7 @@ import React from "react";
 export default function PostDetail(props) {
   return (
     <>
-      {props.post != null && (
+      {props.post != null ? 
         <div className="post card " >
           <div>
             <span className="card-title">Post Detail Information</span>
@@ -37,7 +37,7 @@ export default function PostDetail(props) {
           </div>
 
         </div>
-      )}
+      :<div><p>There is </p></div>}
     </>
   );
 }

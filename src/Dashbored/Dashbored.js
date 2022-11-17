@@ -45,7 +45,7 @@ export default function Dashbored() {
   const fetchPosts = () =>{
     axios.get('http://localhost:8080/api/v1/posts')
       .then(response =>{
-        console.log(response.data)
+        // console.log(response.data)
         setPost(response.data)
       })
       .catch(err=>{
