@@ -4,7 +4,7 @@ export default function PostDetail(props) {
   return (
     <>
       {props.post != null && (
-        <div className="post" >
+        <div className="post " >
           <div className="col s12 m5">
             <div className="card-panel  ">
               <div>
