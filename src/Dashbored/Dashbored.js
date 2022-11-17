@@ -21,9 +21,9 @@ export default function Dashbored() {
   
 
   const [post, setPost] = useState([
-    { id: 111, title: "Happiness", author: "Jhone" },
-    { id: 112, title: "MIU", author: "Dean" },
-    { id: 113, title: "Enjoy Life", author: "Jasmin" },
+    { id: 111, title: "Happiness", author: "Jhone",review:["It is very good post ", "I am feeling happy"] },
+    { id: 112, title: "MIU", author: "Dean",review:["The post from MIU dean ): ", "WAA is good course"] },
+    { id: 113, title: "Enjoy Life", author: "Jasmin",review:[" Life is short enjoy today" , "Life is wonderfull around there"] },
   ]);
   const [activePost, setActivePost] = useState(null);
   return (
